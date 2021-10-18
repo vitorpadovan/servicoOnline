@@ -1,4 +1,4 @@
-package com.br.vitorhernandes.servicoOnline;
+package com.br.vitorhernandes.servicoOnline.repo;
 
 import java.util.Optional;
 

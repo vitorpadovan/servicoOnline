@@ -1,4 +1,4 @@
-package com.br.vitorhernandes.servicoOnline;
+package com.br.vitorhernandes.servicoOnline.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
