@@ -43,7 +43,7 @@ public class UsuarioService implements UserDetailsService {
 		if (u.getSenha().trim().length() == 0) {
 			throw new DataIntegrityException("Impossível salvar usuário s/ senha");
 		}
-		if (u.getSenha().trim().length() == 0) {
+		if (u.getLogin().trim().length() == 0) {
 			throw new DataIntegrityException("Impossível salvar usuário s/ login");
 		}
 		Optional<Usuario> optU = repoUsuario.findByLogin(u.getSenha());
