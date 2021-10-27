@@ -47,7 +47,7 @@ public class UsuarioService implements UserDetailsService {
 			throw new DataIntegrityException("Impossível salvar usuário s/ login");
 		}
 		Optional<Usuario> optU = repoUsuario.findByLogin(u.getSenha());
-		if (optU.isPresent() || !optU.isEmpty()) {
+		if (optU != null && (optU.isPresent() || !optU.isEmpty())) {
 			throw new DataIntegrityException("Usuário já existe");
 		}
 		try {
