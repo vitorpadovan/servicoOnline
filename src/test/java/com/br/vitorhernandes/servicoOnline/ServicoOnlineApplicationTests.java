@@ -9,5 +9,4 @@ class ServicoOnlineApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
