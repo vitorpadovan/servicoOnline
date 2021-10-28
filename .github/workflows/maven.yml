@@ -27,10 +27,10 @@ jobs:
     - name: Run Test
       run: mvn test
       env:
-        API_DB_NAME: ${{ secret.API_DB_NAME }}
-        API_DB_PASSWD: ${{ secret.API_DB_PASSWD }}
-        API_DB_PORT: ${{ secret.API_DB_PORT }}
-        API_DB_SERVER: ${{ secret.API_DB_SERVER }}
-        API_DB_USER: ${{ secret.API_DB_USER }}
-        JWT_EXPERIRATION: ${{ secret.JWT_EXPERIRATION }}
-        JWT_SECRET: ${{ secret.JWT_SECRET }}
+        API_DB_NAME: ${{ secrets.API_DB_NAME }}
+        API_DB_PASSWD: ${{ secrets.API_DB_PASSWD }}
+        API_DB_PORT: ${{ secrets.API_DB_PORT }}
+        API_DB_SERVER: ${{ secrets.API_DB_SERVER }}
+        API_DB_USER: ${{ secrets.API_DB_USER }}
+        JWT_EXPERIRATION: ${{ secrets.JWT_EXPERIRATION }}
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
