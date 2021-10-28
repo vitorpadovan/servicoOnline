@@ -22,11 +22,15 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: maven
-    - name: Display server
-      run: echo "Servidor a ser usado será o $SERVIDOR"
-      env:
-        SERVIDOR: ${{ secrets.API_DB_SERVER }} 
     - name: Validate Format
       run: mvn formatter:validate
     - name: Run Test
       run: mvn test
+      env:
+        API_DB_NAME: ${{ secret.API_DB_NAME }}
+        API_DB_PASSWD: ${{ secret.API_DB_PASSWD }}
+        API_DB_PORT: ${{ secret.API_DB_PORT }}
+        API_DB_SERVER: ${{ secret.API_DB_SERVER }}
+        API_DB_USER: ${{ secret.API_DB_USER }}
+        JWT_EXPERIRATION: ${{ secret.JWT_EXPERIRATION }}
+        JWT_SECRET: ${{ secret.JWT_SECRET }}
